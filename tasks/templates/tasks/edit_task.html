@@ -1,0 +1,17 @@
+{% extends 'tasks/base.html' %}
+{#{% load static %}#}
+{% block content %}
+    <br/>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card card-body">
+                <form action="" method="post">
+                    {{ form.as_p }}
+                    <a href="{% url 'home' %}" class="btn btn-warning">Cancel</a>
+                    <input class="btn btn-success" type="submit" name="submit" value="Confirm">
+                </form>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

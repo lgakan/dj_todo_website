@@ -1,0 +1,41 @@
+#logo{
+  width: 30px;
+  height: 30px;
+}
+
+.site_footer {
+    background-color: #1111;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	padding: 5px;
+
+}
+
+.table{
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 100%;
+}
+
+/*.table_icons{*/
+/*    text-align: center;*/
+/*    width: 100px;*/
+/*    !*margin-left: -px;*!*/
+/*    !*margin-bottom: auto;*!*/
+/*}*/
+
+.table_icon img{
+    width: 13px;
+    height: 13px;
+    float: left;
+    margin-left: 5px;
+}
+
+.new_task_button{
+    margin-top: 10px;
+    text-align: center;
+}
+
