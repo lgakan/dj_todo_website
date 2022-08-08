@@ -1,19 +1,28 @@
 {% load static %}
 
+<style>
+    .hello_msg{
+        font-size: 18px;
+        color: white;
+        margin-right: 20px;
+    }
+</style>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 <!-- <a href="https://www.flaticon.com/free-icons/list" title="list icons">List icons created by Kiranshastry - Flaticon</a> -->
- <img id='logo' src="{% static 'images/logo.png' %}">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="{% url 'home' %}">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'details' %}">Details</a>
-      </li>
-    </ul>
-  </div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <a class="navbar-brand" href="#">
+           <img id='logo' src="{% static 'images/logo.png' %}" alt="logo image">
+        </a>
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'details' %}">Details</a>
+            </li>
+        </ul>
+
+    </div>
+    <span class="hello_msg">Hello, {{ request.user }} </span>
+    <span><a href="{% url  'logout' %}"><input class="btn btn-outline-warning" type="submit" value="Logout"/></a></span>
 </nav>
