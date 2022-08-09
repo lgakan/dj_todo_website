@@ -48,7 +48,11 @@ def logout_page(request):
 
 @login_required(login_url='login')
 def home(request):
-    tasks = Task.objects.all()
+    if 'query' in request.GET:
+        query = request.GET['query']
+        tasks = Task.objects.filter(title__icontains=query)
+    else:
+        tasks = Task.objects.all()
     context = {"tasks": tasks}
     return render(request, 'tasks/home.html', context)
 

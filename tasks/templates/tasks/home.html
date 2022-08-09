@@ -6,6 +6,12 @@
             <button type="button" class="btn btn-outline-primary">New Task</button>
         </a>
     </div>
+    <div class="searching">
+        <form method="GET" action="">
+            <input type="text" id='q' name='query' placeholder="Task Name..."/>
+            <input class="btn btn-outline-primary" type="submit" value="Search"/>
+        </form>
+    </div>
     <table class="table">
       <thead>
         <tr>
@@ -23,7 +29,7 @@
                     <th class="table_icons">
                         <div>
                             <div class="table_icon">
-                                <a href="{% url 'delete_task' task.id %}" title="Copy row">
+                                <a href="{% url 'delete_task' task.id %}" title="Delete task">
                                     <img src="{% static 'images/delete_img.png' %}" alt="Copy button" />
                                 </a>
                             </div>
@@ -49,7 +55,7 @@
                                     </div>
                                   </div>
                                 </div>
-                                <a href="#" data-toggle="modal" data-target="#my_modal" title="Delete">
+                                <a href="#" data-toggle="modal" data-target="#my_modal" title="Copy row">
                                     <img src="{% static 'images/copy_img.png' %}" alt="Delete button" />
                                 </a>
                             </div>
